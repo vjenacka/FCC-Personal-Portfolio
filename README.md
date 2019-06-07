@@ -1,1 +1,1 @@
-5th FCC project with HTML5 and Sass.
+5th FCC project with HTML5 and Sass. Idea for the project taken form https://codepen.io/freeCodeCamp/full/zNBOYG but the code was written by myself.
