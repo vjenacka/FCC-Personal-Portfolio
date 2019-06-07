@@ -1,1 +1,162 @@
 @import 'reset'
+@import 'variables'
+@import 'mixins'
+
+#navbar
+    position: fixed
+    display: flex
+    justify-content: flex-end
+    top: 0
+    left: 0
+    padding: 10px
+    width: 100vw
+    background-color: $primary-color;
+    z-index: 2
+
+    ul
+        width: 35%
+        display: flex
+        justify-content: space-around
+
+        @include mQ(600px)
+            width: 50%
+
+        a
+            display: inline-block
+            margin: 15px 0;
+            font-weight: bold
+            color: darken($secondary-color, 50)
+            transition: color 0.2s ease-in
+        
+        a:hover
+            color: darken($secondary-color, 60)
+
+#welcome-section
+    position: relative
+    height: 100vh
+    background-color: $primary-color
+
+    div
+        position: absolute
+        top: 50vh
+        left: 40vw
+        text-align: center
+
+        @include mQ(600px)
+            left: 30vw
+
+        h1
+            font-size: 2rem  
+        
+        p
+            padding: 5px 0
+            font-size: 1.1rem
+            color: darken($secondary-color, 50)
+
+#projects
+    padding: 10vh 0
+
+    h3
+        text-align: center
+        padding-bottom: 10vh
+        font-size: 1.6rem
+        color: darken($secondary-color, 50)
+
+    .grid
+        display: grid
+        width: 60%
+        margin: 0 auto
+        grid-template-columns: repeat(2,2fr)
+        grid-template-rows: repeat(2, 2fr)
+
+        @include mQ(800px)
+            display: flex
+            flex-direction: column
+        
+
+        .project-tile
+            margin: 0 0 1.5rem 1.5rem
+            border: 1px solid darken($secondary-color, 60)
+
+            img
+                width: 100%
+                height: auto
+                border-bottom: 1px solid darken($secondary-color, 60)
+            
+            figcaption
+                text-align: center
+                padding: 15px 0
+                color: darken($secondary-color, 50)
+
+    #codepen-btn
+        display: block
+        margin: 5vh auto
+        padding: 10px 60px
+        background: $primary-color
+        color: darken($secondary-color, 50)
+        font-size: 1.2rem
+        font-weight: bold
+        border: 1px solid darken($secondary-color, 60)
+        border-radius: 4px
+        transition: background 0.2s ease-in
+
+    #codepen-btn:hover
+        background: darken($primary-color, 10)
+
+#contact
+    height: 90vh
+    background-color: $secondary-color
+
+    h3
+        text-align: center
+        padding-top: 10vh
+        font-size: 2rem
+
+    p
+        text-align: center
+        padding-top: 10px
+
+    div
+        width: 60%
+        margin: 20vh auto
+
+        @include mQ(800px)
+            margin: 10px auto
+
+        ul
+            display: flex
+            justify-content: space-around
+
+            @include mQ(800px)
+                flex-direction: column
+                align-items: center
+
+            a
+                width: 150px
+                height: 100px
+                margin-top: 20px
+                background: #f3f3f3
+                text-align: center
+                border: 1px solid darken($secondary-color, 60)
+                border-radius: 50%
+                transition: background 0.2s ease-in
+
+                li
+                    display: block
+                    margin-top: 40px
+                    color: darken($secondary-color, 50)
+
+            a:hover
+                background: darken(#f3f3f3,5)
+
+footer
+    height: 20vh
+    padding: 20px
+    text-align: center
+    background: $primary-color
+
+    p
+        margin-top: 40px
+        font-weight: bold
+        font-size: 1rem
+        color: #333                
